@@ -1,5 +1,5 @@
 <?php
-$exArr1 = [
-    'klucz' => 'wartosc',
+$exArr2 = [
+    'wartosc',
 ];
-var_export ($exArr1);
+var_export ($exArr2);
