@@ -9,4 +9,4 @@ $cars = [
         ],
     ],
 ];
-var_export($cars);
+var_export(isset($cars['mercedes']));
