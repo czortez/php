@@ -21,6 +21,6 @@ $weekdays = [
 
 ];
 $checkWeekday = 'monday';
-echo isset ($weekdays['pl'][$checkWeekday]) ? 'jest' : 'brak';
-echo isset ($weekdays['en'][$checkWeekday]) ? 'jest' : 'brak';
-echo isset ($weekdays['it'][$checkWeekday]) ? 'jest' : 'brak';
+echo isset ($weekdays['pl'][$checkWeekday]) ? ' jest ' : ' brak ';
+echo isset ($weekdays['en'][$checkWeekday]) ? ' jest ' : ' brak ';
+echo isset ($weekdays['it'][$checkWeekday]) ? ' jest ' : ' brak ';
