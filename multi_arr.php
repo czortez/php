@@ -1,9 +1,12 @@
 <?php
-$big = [
-    'small' => [
-        'key' => 'value',
+$cars = [
+    'volvo' => [
+        'xc90', 'xc60', 'v60',
+    ],
+    'skoda' => [
+        'felicia' => [
+            'hatchback', 'kombi', 'pickup.'
+        ],
     ],
 ];
-echo $big['small']['key'];
-unset($big['small']['key']);
-var_export($big);
+var_export($cars);
