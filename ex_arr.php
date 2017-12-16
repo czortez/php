@@ -23,3 +23,5 @@ var_export($exArr5);
 
 $exArr6{'klucz'} = 'wartosc';
 var_export($exArr6);
+
+
