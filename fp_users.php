@@ -35,26 +35,22 @@ $users = [
         'status' => 'activated',
     ],
 ];
- $newUsers=[]; 
+$isNotHidden = function(array $user): bool {
+    return $user['status'] !== 'hidden';
+};
 
-foreach ($users as $user) {
-   
+$isNotDisabled = function(array $user): bool {
+    return $user['status'] !== 'disabled';
+};
 
-    if ($user['status'] === 'hidden') {
-            continue;
+$isLessThan30 = function(array $user): bool {
+    return $user['birthYear'] >= 1987;
+};
 
-       
-    }
-    if ($user['status'] === 'disabled') {
-            continue;
-           
-       }
-    if ($user['birthYear'] < 1987) {
-            continue;
-           
-       }
-       
-       $newUsers[]=$user;
-}
-var_export($newUsers);
+// Pobranie aktywnych użytkowników mających mniej niż 30 lat
+$funcActivatedUsers = array_filter(array_filter(array_filter(
+        $users, $isNotHidden
+), $isNotDisabled), $isLessThan30);
+
+var_export($funcActivatedUsers);
 
