@@ -7,9 +7,11 @@ declare(strict_types=1);
  * @param string $familyName nazwisko
  */
 
-function printFamilyName ($familyName) : void   
-    {
-        echo "Name: $familyName", PHP_EOL;
-    }
-printFamilyName('Nowak');
-printFamilyName('Kowalski');
+function printFamilyName (string $familyName, int $year = 2000) 
+{
+    echo "Name: $familyName. Born: $year", PHP_EOL;
+
+}
+
+printFamilyName('Kowalski', 1984);
+
