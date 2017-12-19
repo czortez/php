@@ -1,6 +1,9 @@
 <?php   
 declare(strict_types=1);
 
-foreach (range(1, 10) as $number) {
-    echo $number;
-}
+$numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    foreach ($numbers as $liczby) {
+        var_export($liczby);
+    
+    }
+    
