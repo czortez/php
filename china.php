@@ -1,5 +1,5 @@
 <?php
-$rok = 1984;
+$rok = 2014;
 
 
 switch ($rok % 12) {
