@@ -8,6 +8,7 @@ $customer->setName('Janusz');
 $customer->askForDiscount();
 echo $customer->getDiscount(),PHP_EOL;
 echo $customer->getName(),PHP_EOL;
+
 var_export($customer);
 
 
@@ -23,6 +24,7 @@ $Krystian->setName('Krystian');
 $Krystian->askForDiscount();
 echo $Krystian->getDiscount(),PHP_EOL;
 echo $Krystian->getName(),PHP_EOL;
+GentleCustomer::getClassName();
 var_export($Krystian);
 
 

@@ -18,4 +18,8 @@ class Customer
     {
          echo  " Good morning my name is $this->name Can I have a discount",PHP_EOL;
     }
+    public static function getClassName(): void
+    {
+        echo 'Jestem klasą', get_called_class(), PHP_EOL;
+    }
 }
