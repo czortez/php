@@ -14,4 +14,8 @@ class Customer
     {
         return $this->name;
     }
+    public function askForDiscount() 
+    {
+         echo  "Can I have a discount",PHP_EOL;
+    }
 }

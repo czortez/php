@@ -5,14 +5,16 @@ require_once 'ChaoticConsumer.php';
 
 $customer = new Customer();
 $customer->setName('Janusz');
-echo $customer->getDiscount();
-echo $customer->getName();
+$customer->askForDiscount();
+echo $customer->getDiscount(),PHP_EOL;
+echo $customer->getName(),PHP_EOL;
 var_export($customer);
 
 
 $rudolf = new ChaoticCustomer();
 $rudolf->setName('Rudolf');
-echo $rudolf->getDiscount();
-echo $rudolf->getName();
+$rudolf->askForDiscount();
+echo $rudolf->getDiscount(),PHP_EOL;
+echo $rudolf->getName(),PHP_EOL;
 var_export($rudolf);
 
