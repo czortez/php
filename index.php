@@ -2,7 +2,7 @@
 declare (strict_types = 1);
 require_once 'Customer.php';
 require_once 'ChaoticConsumer.php';
-
+require_once 'GentleCustomer.php';
 $customer = new Customer();
 $customer->setName('Janusz');
 $customer->askForDiscount();
@@ -17,4 +17,12 @@ $rudolf->askForDiscount();
 echo $rudolf->getDiscount(),PHP_EOL;
 echo $rudolf->getName(),PHP_EOL;
 var_export($rudolf);
+
+$Krystian = new GentleCustomer();
+$Krystian->setName('Krystian');
+$Krystian->askForDiscount();
+echo $Krystian->getDiscount(),PHP_EOL;
+echo $Krystian->getName(),PHP_EOL;
+var_export($Krystian);
+
 

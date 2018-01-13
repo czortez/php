@@ -6,10 +6,10 @@ class ChaoticCustomer extends Customer
 {
 public function getDiscount(): int
 {
-    return 5 ;
+    return 4 ;
 }
 public function askForDiscount()
 {
-    echo "Give me a discount!!",PHP_EOL;
+    echo "I am $this->name  Give me a discount!!",PHP_EOL;
 }
 }

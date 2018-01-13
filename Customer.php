@@ -1,7 +1,7 @@
 <?php 
 class Customer
 {
-    private $name;
+    protected $name;
     public function getDiscount() : int
     {
         return 20;
@@ -16,6 +16,6 @@ class Customer
     }
     public function askForDiscount() 
     {
-         echo  "Can I have a discount",PHP_EOL;
+         echo  " Good morning my name is $this->name Can I have a discount",PHP_EOL;
     }
 }
