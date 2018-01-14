@@ -16,7 +16,7 @@ var_export($customer);
 $rudolf = new ChaoticCustomer();
 $rudolf->setName('Rudolf');
 $rudolf->askForDiscount();
-$rudolf = CustomerFactory::chooseCustomer('chaotic');
+$rudolf = CustomerFactory::chooseCustomer(CustomerFactory::GENTLE);
 echo $rudolf->getDiscount(),PHP_EOL;
 echo $rudolf->getName(),PHP_EOL;
 var_export($rudolf);
