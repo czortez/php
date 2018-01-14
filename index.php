@@ -1,9 +1,12 @@
 <?php 
 declare (strict_types = 1);
+require_once 'CustomerInterface.php';
 require_once 'Customer.php';
 require_once 'ChaoticConsumer.php';
 require_once 'GentleCustomer.php';
 require_once 'CustomerFactory.php';
+
+
 $customer = new Customer();
 $customer->setName('Janusz');
 $customer->askForDiscount();

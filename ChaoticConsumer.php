@@ -2,7 +2,7 @@
 
 declare (strict_types = 1);
 
-class ChaoticCustomer extends Customer
+class ChaoticCustomer extends Customer implements CustomerInterface
 {
     public function getDiscount() : int
     {

@@ -2,12 +2,14 @@
 
 declare (strict_types = 1);
 
-class GentleCustomer extends Customer
+class GentleCustomer extends Customer implements CustomerInterface
 {
     /**
      * Konstruktor ustawia status Klienta na premium
      */
     public function __construct(int $age=0)
+
+    
 
     {
         $this->status = 'premium';
