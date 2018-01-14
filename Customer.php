@@ -1,7 +1,19 @@
 <?php 
+
 class Customer
+
+/**
+ * Status danego Klienta (moze być basic lub premium)
+ * 
+ * @var string
+ */
+
 {
+
+    public $status = 'basic';
+    
     protected $name;
+    
     public function getDiscount() : int
     {
         return 20;
@@ -14,12 +26,12 @@ class Customer
     {
         return $this->name;
     }
-    public function askForDiscount() 
+    public function askForDiscount()
     {
-         echo  " Good morning my name is $this->name Can I have a discount",PHP_EOL;
+        echo " Good morning my name is $this->name Can I have a discount", PHP_EOL;
     }
-    public static function getClassName(): void
-    {
+    public static function getClassName () : void {
         echo 'Jestem klasą', get_called_class(), PHP_EOL;
     }
+
 }
