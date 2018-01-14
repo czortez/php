@@ -9,11 +9,17 @@ class Customer
  */
 
 {
-
     public $status = 'basic';
-    
+
     protected $name;
-    
+
+    public $age;
+
+    public function __construct(int $age = 0)
+    {
+        $this->age = $age;
+    }
+
     public function getDiscount() : int
     {
         return 20;
@@ -30,8 +36,9 @@ class Customer
     {
         echo " Good morning my name is $this->name Can I have a discount", PHP_EOL;
     }
-    public static function getClassName () : void {
-        echo 'Jestem klasą', get_called_class(), PHP_EOL;
+    public static function getClassName() : void
+    {
+        echo ' Jestem klasą ', get_called_class(), PHP_EOL;
     }
 
 }

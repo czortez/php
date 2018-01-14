@@ -7,26 +7,27 @@ require_once 'CustomerFactory.php';
 $customer = new Customer();
 $customer->setName('Janusz');
 $customer->askForDiscount();
-echo $customer->getDiscount(),PHP_EOL;
-echo $customer->getName(),PHP_EOL;
+echo $customer->getDiscount(), PHP_EOL;
+echo $customer->getName(), PHP_EOL;
 
 var_export($customer);
 
 
-$rudolf = new ChaoticCustomer();
+
+$rudolf = CustomerFactory::chooseCustomer(CustomerFactory::GENTLE,1984);
 $rudolf->setName('Rudolf');
 $rudolf->askForDiscount();
-$rudolf = CustomerFactory::chooseCustomer(CustomerFactory::GENTLE);
-echo $rudolf->getDiscount(),PHP_EOL;
-echo $rudolf->getName(),PHP_EOL;
+
+echo $rudolf->getDiscount(), PHP_EOL;
+echo $rudolf->getName(), PHP_EOL;
 var_export($rudolf);
 
-$Krystian = new GentleCustomer();
-$Krystian->setName('Krystian');
-$Krystian->askForDiscount();
-echo $Krystian->getDiscount(),PHP_EOL;
-echo $Krystian->getName(),PHP_EOL;
-GentleCustomer::getClassName();
-var_export($Krystian);
 
 
+$janek = new Customer(3);
+$zenek = new GentleCustomer(4);
+$barnaba = new ChaoticCustomer(5);
+
+var_export($janek);
+var_export($zenek);
+var_export($barnaba);
