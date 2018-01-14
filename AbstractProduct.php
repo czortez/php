@@ -15,4 +15,5 @@ abstract class AbstractProduct
     {
         return $this->price;
     }
+    abstract public function changeStatus(string $newStatus);
 }
