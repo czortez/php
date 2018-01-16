@@ -12,4 +12,8 @@ class ChaoticCustomer extends Customer implements CustomerInterface
     {
         echo "I am $this->name  Give me a discount!!", PHP_EOL;
     }
+    public static function askForRenew(int $period)
+    {
+        
+    }
 }

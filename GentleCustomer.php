@@ -25,4 +25,8 @@ class GentleCustomer extends Customer implements CustomerInterface
     {
         echo "Good morning my name is $this->name Can I have a discount", PHP_EOL;
     }
+    public static function askForRenew(int $period)
+    {
+        
+    }
 }

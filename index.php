@@ -1,5 +1,7 @@
 <?php 
 declare (strict_types = 1);
+
+require_once 'CustomerInvoice.php';
 require_once 'CustomerInterface.php';
 require_once 'Customer.php';
 require_once 'ChaoticConsumer.php';
@@ -31,6 +33,7 @@ $janek = new Customer(3);
 $zenek = new GentleCustomer(4);
 $barnaba = new ChaoticCustomer(5);
 
+$invoice = $rudolf->askForInvoice(88);
 var_export($janek);
 var_export($zenek);
 var_export($barnaba);

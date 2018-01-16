@@ -1,5 +1,5 @@
 <?php 
-
+declare (strict_types = 1);
 class Customer
 
 /**
@@ -40,5 +40,18 @@ class Customer
     {
         echo ' Jestem klasą ', get_called_class(), PHP_EOL;
     }
+    public function askForInvoice(int $invoiceId): Invoice
+    {
+        $invoice = new Invoice();
+        $invoice->number = $invoiceId;
+        $invoice->data = new DataTime('now');
+        $invoice->setCustomer($this);
+
+        return $invoice;
+
+    }
+    public $firstName;
+    public $lastname;
+    public $nip;
 
 }
