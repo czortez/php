@@ -40,12 +40,12 @@ class Customer
     {
         echo ' Jestem klasą ', get_called_class(), PHP_EOL;
     }
-    public function askForInvoice(int $invoiceId): Invoice
+    public function askForInvoice(int $invoiceId) : Invoice
     {
         $invoice = new Invoice();
         $invoice->number = $invoiceId;
-        $invoice->data = new DataTime('now');
-        $invoice->setCustomer($this);
+        $invoice->date = new DateTime('now');
+        $invoice->setCustomer($rudolf);
 
         return $invoice;
 

@@ -22,4 +22,10 @@ class Invoice
      */
     public $customer;
 
+    public function setCustomer(Customer $customer)
+    {
+        $this->customer = $customer;
+    }
+  
+
 }
