@@ -1,7 +1,7 @@
 <?php 
 declare (strict_types = 1);
 
-class Rectangle
+class Rectangle implements AreaCalculableInterface
 {
     public $height;
     public $width;
@@ -22,10 +22,11 @@ class Rectangle
     {
         $this->width = $width;
     }
-    public function calcArea() : int
-    {
-        return $this->height * $this->width;
-    }
+   public function calcArea()
+   {
+    return $this->height * $this->width;
+   }
 
 }
+
 
