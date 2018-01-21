@@ -1,11 +1,10 @@
 <?php 
 declare (strict_types = 1);
-class Boat
+
+class Boat implements SwimableInterface
 {
-    public function openWindow()
-    {
-    }
     public function swim()
     {
+
     }
 }
