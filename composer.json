@@ -1,5 +1,13 @@
 {
     "name": "czortez/first",
     "type": "project",
-    "require": {}
+    "require": {
+        "friendsofphp/php-cs-fixer": "^2.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "Czortez\\": "src/Czortez"
+        }
+    }
+
 }
