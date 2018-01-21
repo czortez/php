@@ -1,10 +1,5 @@
 {
     "name": "czortez/first",
     "type": "project",
-    "require": {},
-    "autoload": {
-        "psr-4": {"Czortez\\": "src/Czortez"}
-        
-    }
+    "require": {}
 }
-
