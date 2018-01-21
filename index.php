@@ -9,7 +9,7 @@ require_once 'Cruiser.php';
 require_once 'ResidentalHouse.php';
 require_once 'OfficeBuilding.php';
 
-$biuro = new OfficeBuilding();
+$biuro = new Czortez\OfficeBuilding();
 
 $biuro->startEmergencyAlarm();
 echo  PHP_EOL;
@@ -19,7 +19,7 @@ $biuro->stopEmergencyAlarm();
 echo PHP_EOL;
 var_export($biuro);
 
-$statekWycieczkowy = new Cruiser();
+$statekWycieczkowy = new Czortez\Cruiser();
 
 $statekWycieczkowy->startEmergencyAlarm();
 echo PHP_EOL;
