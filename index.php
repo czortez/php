@@ -12,5 +12,10 @@ require_once 'ChimneySweep.php';
 
 $kominiarz = new ChimneySweep();
 $kominiarz->increaseLuckAmount(10);
-$kominiarz->increaseLuckAmount(5);
+echo PHP_EOL;
 var_export ($kominiarz);
+
+$podkowa = new HorseShoe();
+$podkowa->increaseLuckAmount(15);
+echo PHP_EOL;
+var_export ($podkowa);
