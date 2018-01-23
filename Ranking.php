@@ -1,8 +1,10 @@
 <?php
 declare (strict_types = 1);
 
-class Ranking 
+class Ranking
 {
     public $type;
-    public $userCollection
+    
+    public $userCollection;
+
 }

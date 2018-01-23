@@ -1,7 +1,7 @@
 <?php
 declare (strict_types = 1);
 
-class Maths 
+class Maths
 {
-   public $typeOf;
+    public $typeOf;
 }

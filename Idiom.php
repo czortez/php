@@ -1,7 +1,7 @@
 <?php
 declare (strict_types = 1);
 
-class Idiom 
+class Idiom
 {
-public $language;
+    public $language;
 }
