@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Czas wygenerowania: 11 Lut 2018, 14:52
+-- Czas wygenerowania: 11 Lut 2018, 15:09
 -- Wersja serwera: 5.7.20-18-log
 -- Wersja PHP: 7.1.12
 
@@ -101,6 +101,9 @@ CREATE TABLE IF NOT EXISTS `Produkty` (
   `Product Name` enum('Maybach','Rolex','Yacht') DEFAULT NULL,
   `Price` decimal(12,2) DEFAULT NULL,
   `Segment` enum('Low','Medium','High') DEFAULT NULL,
+  `VAT` decimal(12,2) DEFAULT NULL,
+  `Netto` decimal(12,2) DEFAULT NULL,
+  `Brutto` decimal(12,2) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin2 AUTO_INCREMENT=1 ;
 
