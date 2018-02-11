@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Czas wygenerowania: 11 Lut 2018, 11:14
+-- Czas wygenerowania: 11 Lut 2018, 11:19
 -- Wersja serwera: 5.7.20-18-log
 -- Wersja PHP: 7.1.12
 
@@ -49,6 +49,29 @@ INSERT INTO `Dane Konsumentów` (`id`, `Imię`, `Nazwisko`, `Email`, `Zakup prod
 (2, 'Grazyna', 'Sundajska', 'sundajska@nosacz.pl', 10, 3, 2, 15),
 (3, 'Kajetan', 'Nowobogacki', 'bogacki@bogacz.pl', 0, 0, 100, 100),
 (4, 'Olimpia', 'Nowobogacka', 'bogacka@bogacz.pl', 0, 0, 99, 99);
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `Jednoosobowa działalność gospodarcza`
+--
+
+CREATE TABLE IF NOT EXISTS `Jednoosobowa działalność gospodarcza` (
+  `Tak` varchar(45) NOT NULL,
+  `Nie` varchar(45) DEFAULT NULL,
+  `Konsument` int(11) NOT NULL,
+  KEY `konsumen_fk_idx` (`Konsument`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin2;
+
+--
+-- Ograniczenia dla zrzutów tabel
+--
+
+--
+-- Ograniczenia dla tabeli `Jednoosobowa działalność gospodarcza`
+--
+ALTER TABLE `Jednoosobowa działalność gospodarcza`
+  ADD CONSTRAINT `konsumen_fk` FOREIGN KEY (`Konsument`) REFERENCES `Dane Konsumentów` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
