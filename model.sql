@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Czas wygenerowania: 11 Lut 2018, 11:19
+-- Czas wygenerowania: 11 Lut 2018, 13:20
 -- Wersja serwera: 5.7.20-18-log
 -- Wersja PHP: 7.1.12
 
@@ -57,11 +57,56 @@ INSERT INTO `Dane Konsumentów` (`id`, `Imię`, `Nazwisko`, `Email`, `Zakup prod
 --
 
 CREATE TABLE IF NOT EXISTS `Jednoosobowa działalność gospodarcza` (
-  `Tak` varchar(45) NOT NULL,
-  `Nie` varchar(45) DEFAULT NULL,
+  `Id` int(11) NOT NULL,
+  `Typ podmiotu` enum('Jedno-osobowa-działalosc','Osoba-fizyczna') DEFAULT NULL,
   `Konsument` int(11) NOT NULL,
+  PRIMARY KEY (`Id`),
   KEY `konsumen_fk_idx` (`Konsument`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin2;
+
+--
+-- Zrzut danych tabeli `Jednoosobowa działalność gospodarcza`
+--
+
+INSERT INTO `Jednoosobowa działalność gospodarcza` (`Id`, `Typ podmiotu`, `Konsument`) VALUES
+(0, 'Jedno-osobowa-działalosc', 4);
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `Koszyk`
+--
+
+CREATE TABLE IF NOT EXISTS `Koszyk` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `ProduktyHigh` enum('Whiskey36 years','Maybach','Yacht') DEFAULT NULL,
+  `ProduktyMedium` enum('Starka 30 years','Mercedes SL','Boat') DEFAULT NULL,
+  `PorudktLow` enum('Parkowa','Polonez','Kajak') DEFAULT NULL,
+  `Konsument` int(11) DEFAULT NULL,
+  PRIMARY KEY (`Id`),
+  KEY `Konsument_fk_idx` (`Konsument`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin2 AUTO_INCREMENT=2 ;
+
+--
+-- Zrzut danych tabeli `Koszyk`
+--
+
+INSERT INTO `Koszyk` (`Id`, `ProduktyHigh`, `ProduktyMedium`, `PorudktLow`, `Konsument`) VALUES
+(1, 'Maybach', NULL, NULL, 4);
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `Produkty`
+--
+
+CREATE TABLE IF NOT EXISTS `Produkty` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `Product Name` enum('Maybach','Rolex','Yacht') DEFAULT NULL,
+  `Price` decimal(12,2) DEFAULT NULL,
+  `Segment` enum('Low','Medium','High') DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin2 AUTO_INCREMENT=1 ;
 
 --
 -- Ograniczenia dla zrzutów tabel
@@ -72,6 +117,12 @@ CREATE TABLE IF NOT EXISTS `Jednoosobowa działalność gospodarcza` (
 --
 ALTER TABLE `Jednoosobowa działalność gospodarcza`
   ADD CONSTRAINT `konsumen_fk` FOREIGN KEY (`Konsument`) REFERENCES `Dane Konsumentów` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Ograniczenia dla tabeli `Koszyk`
+--
+ALTER TABLE `Koszyk`
+  ADD CONSTRAINT `Konsument_fk` FOREIGN KEY (`Konsument`) REFERENCES `Dane Konsumentów` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
